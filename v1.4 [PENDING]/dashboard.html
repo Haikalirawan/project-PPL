@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/dash.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/652faa76c7.js" crossorigin="anonymous"></script>
+        <title>Dashboard Page</title>
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 background">
+                <div class="brand d-flex justify-content-start">
+                    <img src="./img/logo.png" width="127" height="89" alt="#" class="">
+                    <p class="nama_logo mt-4">E-Mbako</p>
+                </div>
+                <div class="menu myactive mt-5 d-flex justify-content-center">
+                    <a href="dashboard.html" class="pt-4"><center><i class="fa-solid fa-house-chimney"></i>&nbsp; Dashboards</center></a>
+                </div>
+                <div class="menu mt-4 d-flex justify-content-center">
+                    <a href="produk.html" class="pt-4"><center><i class="fa-solid fa-cart-shopping"></i>&nbsp; Produk anda</center></a>
+                </div>
+                <div class="menu mt-4 d-flex justify-content-center">
+                    <a href="penjualan.html" class="pt-4"><center><i class="fa-solid fa-cash-register"></i>&nbsp; Penjualan</center></a>
+                </div>
+                <div class="menu mt-4 d-flex justify-content-center">
+                    <a href="catatan.html" class="pt-4"><center><i class="fa-solid fa-book"></i>&nbsp; Pencatatan</center></a>
+                </div>
+                <div class="mybtn d-flex justify-content-center">
+                    <a href="login.html"><center>Logout</center></a>
+                </div>
+                <div class="footer">
+                    <center>&copy; E-mbako version 1.4</center>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end">
+                        <div class="dropdown" style="margin-right: 60px; margin-bottom: 8px;">
+                            <button class="btn btn-light" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-cart-shopping montserrat"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <h5 class="text-center">List Pemesanan</h5>
+                                <li><button class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#dataPemesanan" aria-controls="offcanvasRight" type="button">[Disetujui] Fresh Kasturi from field</button></li>
+                                <li><button class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#dataPemesanan" aria-controls="offcanvasRight" type="button">[Disetujui] Fresh Kasturi from field</button></li>
+                                <li><button class="dropdown-item poppins text-success" data-bs-toggle="offcanvas" data-bs-target="#dataPemesanan" aria-controls="offcanvasRight" type="button">See More</button></li>
+                            </ul>
+                        </div>
+                        <a href="profile.html" class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <p class="text-disable">Nama Mitra &nbsp; <img class="border border-success rounded-circle" src="./img/profile.jpg" alt="foto mitra" rounded-circle width="50"></p>
+                        </a>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 id="offcanvasRightLabel">Profile Mitra</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="row">
+                                    <form action="" method="" enctype="multipart/form-data">
+                                        <div class="col-lg-12">
+                                            <img src="./img/profile.jpg" class="img-thumbnail rounded mx-auto d-block mb-2" alt="Profile Picture">
+                                            <input type="file" class="form-control mb-4" id="inputGroupFile01">
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="nama" class="form-label">Nama : </label>
+                                            <input type="text" name="name" class="form-control" id="nama" autofocus autocomplete="off" placeholder="">
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="jabatan" class="form-label">Jabatan</label>
+                                            <select id="jabatan" class="form-select">
+                                                <option value="pemilik">Pemilik</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="Alamat" class="form-label">Alamat</label>
+                                            <input type="text" class="form-control" id="Alamat">
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="Email" class="form-label">Email</label>
+                                            <input type="text" class="form-control" id="Email">
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="Username" class="form-label">Username</label>
+                                            <input type="text" class="form-control" id="Username">
+                                        </div>
+                                        <div class="col-lg-12 mb-3">
+                                            <label for="Password" class="form-label">Password: </label>
+                                            <input type="text" class="form-control" id="Password">
+                                        </div>
+                                        <input type="hidden" name="update_at">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Kembali</button>
+                                        <button type="submit" class="btn btn-success">Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                 
+                </nav>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="cards pt-4 ">
+                            
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/P1.jpg" class="card-img-top" alt="Produk pertama">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fresh Kasturi from field</h5>
+                                    <p class="card-text">Description - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="card-text text-secondary">Price - Rp. 1.950.000,00 /kg</p>
+                                    <img class="border border-light rounded-circle" src="./img/profile.jpg" alt="foto mitra" rounded-circle width="45" data-bs-toggle="modal" data-bs-target="#cekProfile">
+                                    <a href="#" class="btn btn-success float-end" data-bs-toggle="offcanvas" data-bs-target="#detailProduk" aria-controls="offcanvasTop">Cek Produk</a> 
+                                    <a href="#" class="btn btn-secondary float-end" data-bs-toggle="offcanvas" data-bs-target="#dataUlasan" aria-controls="offcanvasTop">Ulasan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-top" style="height:auto" id="dataPemesanan" aria-labelledby="offcanvasTopLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasTopLabel">Detail Pemesanan</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <a href="dashboard.html" class="btn btn-success">Tambah</a>
+                                </div>
+                                <div class="col-lg-10 btn-outline-secondary rounded">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="./img/P1.jpg" class="img-thumbnail rounded mt-2" width="150" alt="Profile Picture">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="fw-bold text-start mt-1">Fresh kasturi from field</p>
+                                            <p class="text-start">IDR 1.950.000-,</p>
+                                            <p class="text-start">Status : <i class="text-success fw-bolder">Disetujui</i></p>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <button type="button" class="btn-close text-reset mt-5 float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 btn-outline-secondary rounded mt-5">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="./img/P1.jpg" class="img-thumbnail rounded mt-2" width="150" alt="Profile Picture">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <p class="fw-bold text-start mt-1">Fresh kasturi from field</p>
+                                            <p class="text-start">IDR 1.950.000-,</p>
+                                            <p class="text-start">Status : <i class="text-success fw-bolder">Disetujui</i></p>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <button type="button" class="btn-close text-reset mt-5 float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary mt-5" data-bs-dismiss="offcanvas" aria-label="Close">Kembali</button>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-top" style="height:auto" id="dataUlasan" aria-labelledby="offcanvasTopLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasTopLabel">Detail Ulasan Produk</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahUlasan">Tambah</a>
+                                </div>
+                                <div class="col-lg-1">
+                                    <img class="border border-success rounded-circle" src="./img/profile.jpg" alt="foto mitra" rounded-circle width="50">
+                                </div>
+                                <div class="col-lg-8">
+                                    <p class="text-disable bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla illum alias odio sunt assumenda incidunt consectetur sit suscipit maxime provident.</p>
+                                </div>
+                                <div class="col-lg-3 mt-1">
+                                    <a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editUlasan">Edit</a>
+                                </div>
+                                <div class="col-lg-1 mt-4">
+                                    <img class="border border-success rounded-circle" src="./img/profile.jpg" alt="foto mitra" rounded-circle width="50">
+                                </div>
+                                <div class="col-lg-8 mt-4">
+                                    <p class="text-disable bg-light">Lorem ipsum dolor incidunt consectetur sit suscipit maxime provident.</p>
+                                </div>
+                                <div class="col-lg-3 mt-3">
+                                    <a href="#" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</a>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary mt-5" data-bs-dismiss="offcanvas" aria-label="Close">Kembali</button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="editUlasan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit ulasan</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="ulasan" class="col-form-label">Ulasan: </label>
+                                            <textarea name="ulasan" id="ulasan" class="form-control" cols="20" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla illum alias odio sunt assumenda incidunt consectetur sit suscipit maxime provident.</textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="button" class="btn btn-success">Ubah</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="tambahUlasan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Tambah ulasan</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="ulasan" class="col-form-label">Ulasan: </label>
+                                            <textarea name="ulasan" id="ulasan" class="form-control" cols="20" rows="10"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                    <button type="button" class="btn btn-success">Ubah</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-top" style="height:auto" tabindex="-1" id="detailProduk" aria-labelledby="offcanvasTopLabel exampleModalLabel" aria-hidden="true">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasTopLabel">Halaman Detail Produk</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <form action="" method="" enctype="multipart/form-data">
+                                <div class="col-lg-12">
+                                    <img src="./img/P1.jpg" class="img-thumbnail rounded mx-auto d-block mb-2" width="500" height="500" alt="Profile Picture">
+                                </div>
+                                
+                                <div class="col-lg-12 mb-3">
+                                    <label for="title" class="form-label">Title : </label>
+                                    <input class="form-control" type="text" value="Fresh Kasturi from field" aria-label="readonly input example" readonly>
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label for="Price" class="form-label">Price : </label>
+                                    <input class="form-control" type="text" value="1.950.000,00" aria-label="readonly input example" readonly>
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label for="Category_id class="form-label">Category_id : </label>
+                                    <input class="form-control" type="text" value="1" aria-label="readonly input example" readonly>
+                                </div>
+                                <div class="col-lg-12 mb-3">
+                                    <label for="Description" class="form-label">Description : </label>
+                                    <textarea class="form-control" aria-label="readonly input example" readonly name="Description" id="Description" cols="20" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea>
+                                </div>
+                                <input type="hidden" name="create_at" value="">
+                                <input type="hidden" name="update_at" value="">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Kembali</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="cekProfile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Profile Mitra</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img class="border border-light rounded-circle mx-auto d-block" src="./img/profile.jpg" alt="foto mitra" rounded-circle width="150">
+                                    <h3 class="text-center mt-3 montserrat">Mitra Terdaftar</h3>
+                                    <p class="text-disable text-center poppins fs-6 fw-light">Bergabung sejak 2016</p>
+                                    <div class="row mb-3 mt-5">
+                                        <label for="Nama" class="col-sm-2 col-form-label">Nama* </label>
+                                        <div class="col-sm-10">
+                                            <input for="Nama" class="form-control" type="text" value="Bapak Sujaidi" aria-label="readonly input example" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="Jabatan" class="col-sm-2 col-form-label">Jabatan* </label>
+                                        <div class="col-sm-10">
+                                            <input for="Jabatan" class="form-control" type="text" value="Pemilik" aria-label="readonly input example" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="Alamat" class="col-sm-2 col-form-label">Alamat* </label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" aria-label="readonly input example" readonly name="alamat" id="Description" cols="20" rows="10">Jln. Kedawung Jawa Timur Kel/Ds. Kec. Lowokwaru - Malang Jawa Timur</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="Email" class="col-sm-2 col-form-label">Email* </label>
+                                        <div class="col-sm-10">
+                                            <input for="Email" class="form-control" type="text" value="sujaidimandila5@gmail.com" aria-label="readonly input example" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="Username" class="col-sm-2 col-form-label">Username* </label>
+                                        <div class="col-sm-10">
+                                            <input for="Username" class="form-control" type="text" value="Sujaidi05" aria-label="readonly input example" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
